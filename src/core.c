@@ -4798,8 +4798,8 @@ static void ErrorCallback(int error, const char *description)
 }
 
 #if defined(PLATFORM_WEB)
-EM_JS(int, GetCanvasWidth, (), { return canvas.clientWidth; });
-EM_JS(int, GetCanvasHeight, (), { return canvas.clientHeight; });
+int GetCanvasWidth() { return emscripten_run_script_int("return canvas.clientWidth"); };
+int GetCanvasHeight() { return emscripten_run_script_int("return canvas.clientHeight"); };
 
 static EM_BOOL EmscriptenResizeCallback(int eventType, const EmscriptenUiEvent *e, void *userData)
 {
