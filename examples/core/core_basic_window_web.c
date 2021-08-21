@@ -31,6 +31,7 @@ int screenHeight = 450;
 // Module Functions Declaration
 //----------------------------------------------------------------------------------
 void UpdateDrawFrame(void);     // Update and Draw one frame
+void UpdateDrawZig(void);     // Update and Draw one frame
 
 //----------------------------------------------------------------------------------
 // Main Enry Point
@@ -67,19 +68,5 @@ int main()
 //----------------------------------------------------------------------------------
 void UpdateDrawFrame(void)
 {
-    // Update
-    //----------------------------------------------------------------------------------
-    // TODO: Update your variables here
-    //----------------------------------------------------------------------------------
-
-    // Draw
-    //----------------------------------------------------------------------------------
-    BeginDrawing();
-
-        ClearBackground(RAYWHITE);
-
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-
-    EndDrawing();
-    //----------------------------------------------------------------------------------
+    UpdateDrawZig();
 }
